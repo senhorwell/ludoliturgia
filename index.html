@@ -438,6 +438,10 @@
     text-align: center
   }
 
+  .pix-key-value {
+    font-size: 23px;
+  }
+
   .pix-steps {
     font-size: 11px;
     opacity: .8;
@@ -542,7 +546,7 @@
     bub.innerHTML = `<div class="pix-card">
     <div class="pix-amount">R$ 10,00</div>
     <div class="pix-desc">20 Joguinhos da Fé • Acesso imediato pelo Google Drive</div>
-    <div class="pix-key-box" onclick="copyPix()">📋 Toque para copiar a chave<br><b>43.176.861/0001-38</b></div>
+    <div class="pix-key-box" onclick="copyPix()">📋 Toque para copiar a chave<br><b class="pix-key-value">43.176.861/0001-38</b></div>
     <div class="pix-steps">1. Abra seu banco → PIX → Pagar<br>2. Cole a chave acima → Valor R$10<br>3. Envie o comprovante no WhatsApp</div>
     <button class="pix-wa-btn" onclick="openWA('Oi+%21+Fiz+o+PIX+de+R%2410+e+quero+receber+os+joguinhos!')">Enviar comprovante no WhatsApp 💬</button>
   </div>`;
@@ -605,7 +609,7 @@
     },
     preco() {
       typing(() => {
-        addMsg('bot', 'Tudo isso por apenas <b>R$10 no PIX</b>! 💚<br><br>Você paga, eu mando o link do Google Drive com todos os arquivos na hora. É só baixar e imprimir!<br><br>Confio na sua honestidade — pode enviar o comprovante depois se preferir 🙏');
+        addMsg('bot', 'Tudo isso por apenas <b>R$10 no PIX</b>! 💚<br><br>Você paga, eu mando o link do Google Drive com todos os arquivos na hora. É só baixar e imprimir!<br><br>Pode clicar no botão do WhatsApp no canto da pagina para falar com alguém se quiser! Se assim preferir, fique com Deus e até a próxima🙏');
         setTimeout(() => {
           showPix(); setOpts([
             { label: '✅ Já fiz o PIX!', userSay: 'Já fiz o PIX!', next: 'confirmouPix' },
@@ -629,7 +633,7 @@
       typing(() => {
         addMsg('bot', 'Maravilhoso! Que Deus abençoe você e sua família com esses momentos especiais juntos! 🙏✨<br><br>Envie o comprovante no WhatsApp que eu te mando o link do Drive na hora!');
         setOpts([
-          { label: '💬 Enviar comprovante no WhatsApp', wa: true, waMsg: 'Oi+Alice%21+Fiz+o+PIX+de+R%2410+e+quero+receber+os+joguinhos!+%F0%9F%99%8F' },
+          { label: '💬 Enviar comprovante no WhatsApp', wa: true, waMsg: 'Oi+%21+Fiz+o+PIX+de+R%2410+e+quero+receber+os+joguinhos!' },
         ]);
       })
     },
@@ -640,7 +644,7 @@
           { label: '📱 Como recebo os arquivos?', userSay: 'Como recebo os arquivos?', next: 'comoRecebe' },
           { label: '🖨️ Precisa de impressora especial?', userSay: 'Precisa de impressora especial?', next: 'impressora' },
           { label: '👨‍👩‍👧 Para qual faixa de idade?', userSay: 'Para qual faixa de idade?', next: 'idade' },
-          { label: '💬 Falar com a Alice no WhatsApp', wa: true, waMsg: 'Oi+Alice%21+Tenho+uma+d%C3%BAvida+sobre+os+Joguinhos+da+F%C3%A9+%F0%9F%99%8F' },
+          { label: '💬 Falar com a Alice no WhatsApp', wa: true, waMsg: 'Oi+%21+Tenho+uma+d%C3%BAvida+sobre+os+Joguinhos+da+F%C3%A9+%F0%9F%99%8F' },
         ]);
       })
     },
