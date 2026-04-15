@@ -543,7 +543,7 @@
         optsEl.innerHTML = '';
         if (o.userSay) addMsg('user', o.userSay);
         if (o.wa) { window.openWA(o.waMsg || ''); return; }
-        if (o.next) setTimeout(() => flow(o.next), 300);
+        if (o.next) setTimeout(() => flow(o.next), 2000);
       };
       optsEl.appendChild(btn);
     });
